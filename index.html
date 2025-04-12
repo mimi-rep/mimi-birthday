@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday My Love</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: scroll font-family: 'Segoe UI', sans-serif;
+            background: url('back.png');
+            background-size: cover;
+        }
+
+        .tulip {
+            position: absolute;
+            font-size: 24px;
+            animation: fall linear;
+            user-select: none;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh);
+                opacity: 1;
+            }
+        }
+
+        #happyText {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 48px;
+            width: 100%;
+            color: white;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            z-index: 10;
+        }
+
+        #letter {
+            position: absolute;
+            top: 25vh;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 800px;
+            padding: 20px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            font-size: 18px;
+            color: #333;
+            z-index: 10;
+            height: 70vh;
+            overflow: scroll;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari */
+        }
+
+
+        @media screen and (min-width: 320px) and (max-width: 420px) {
+            body {
+                background: url('mobile.png') !important;
+                background-size: cover !important;
+                /* iPhone 13 special bg */
+            }
+
+            #letter {
+                max-width: 300px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="happyText">Happy Birthday, Meri Jaan 💖</div>
+    <div id="letter">
+        <p> Hello My beautiful girl. I wish the girl of my dreams, the one who makes ny heart melt, the one who i want
+            to marry a veryyy happy Birthday.
+            Safreen, My love you make my life better by being in it and I love you soo much. You my love make my heart
+            warm. Your pretty eyes, Your cute voice, Your pretty smile,
+            Those absoluetly good lips i get to call mine. Every moment we share, every single time we are together i
+            feel at peace, i feel loved. I did not know what love was before you and
+            now i don't wanna know anything else about love except you. Your thoughts make me gooo crazyyyyy. I still
+            get those warm hug like feelings when i think about us when i dream about
+            what we did what we can do. Talking to you every day makes my life better. Well i am not sure what to give
+            you as a gift babyy, you know me i cant choose, but You my love are the
+            best present i have, the best person i have, my soulmate. I could never ask for anything but you. Your love
+            makes me feel, ME. I can't tell you how much you mean to me jaana.
+            I love stealing your nicknames but honestly lets be real here, you have better naming sense than me(You are
+            naming our kid). Sooo i might as well steal a few right? Welll my love,
+            I hope from now on I am the one celebrating everyy single birthday with you. A site this time but maybe next
+            year i will be there holding your hands making you smile rather than being sooooo freaking far away from my
+            love:(
+            Anyways Kanna I have written tooo much. I love you Safreen, Zawjati, my baby, my love, my jaanu, my cutie,
+            my sweetie, my baba, my jaana, my kanda, my honeybun, my mimiiiii.
+            I will always be yours. You always be mine. You are the best thing that happen to me. I love youuuuuu
+            soooooo muchhhhhhhhh.
+            <br><br>
+            -Your current boyfriend, Your to be husband, Your Forever💖.
+        </p>
+    </div>
+
+    <script>
+        const tulipCount = 500; // enough to fill the screen in 5 sec
+        const duration = 5000;
+        const container = document.body;
+
+        for (let i = 0; i < tulipCount; i++) {
+            const tulip = document.createElement('div');
+            tulip.classList.add('tulip');
+            tulip.textContent = '🌷';
+            tulip.style.left = `${Math.random() * 100}vw`;
+            tulip.style.animationDuration = `${2 + Math.random() * 3}s`;
+            tulip.style.fontSize = `${20 + Math.random() * 20}px`;
+            tulip.style.top = `-50px`;
+            container.appendChild(tulip);
+        }
+
+        setTimeout(() => {
+            document.getElementById('happyText').style.opacity = 1;
+
+        }, duration);
+
+        setTimeout(() => {
+            document.getElementById('happyText').style.top = 15 + 'vh';
+            document.getElementById('letter').style.opacity = 1;
+        }, duration + 5000);
+    </script>
+
+</body>
+
+</html>
